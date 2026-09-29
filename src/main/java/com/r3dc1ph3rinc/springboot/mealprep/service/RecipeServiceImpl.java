@@ -32,6 +32,11 @@ public class RecipeServiceImpl implements RecipeService{
 
     @Override
     public RecipeIngredients save(RecipeIngredients newRecipeIngredients) {
+        var recipeId = newRecipeIngredients.getRecipe().getId();
+        Recipe recipe = recipeRepository.findById(recipeId).get();
+
+        newRecipeIngredients.setRecipe(recipe);
+
         return recipeIngredientsRepository.save(newRecipeIngredients);
     }
 
