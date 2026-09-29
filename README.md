@@ -4,32 +4,34 @@
 > **Status:** Actively under development
 
 ## About the Project
-A full-stack meal prep application that allows users to create, save, and search recipes and ingredients for household meal preparation. 
+A full-stack meal prep application for creating, saving, and finding recipes for household meal planning 
 
 I created this project to reduce time spent repeatedly searching for the recipes across browser tabs, bookmarks, and screenshots. It provides 
 one organized place to save meal ideas and quickly find the information needed when planning meals and finding past meals. 
 
 
 ## Current Functionality
-- Create and retrieve ingredient data through Spring Boot REST API endpoints
-- Create and retrieve recipe data through Spring Boot REST API endpoints
-- Persist recipe and ingredient data in MySQL using Spring Data JPA and Hibernate
-- Test API requests (`POST` and `GET`) and verify HTTP responses using Postman
+- Create recipes through a Spring Boot REST API
+- Retrieve recipes through the API, including finding a recipe by ID
+- Add an ingredient entry with a name, category, quantity, and unit to an existing recipe
+- Save recipes and ingredient entries in MySQL using Spring Data JPA and Hibernate
+- Test `POST` and `GET` requests using Postman
+- Apply initial validation constraints to entity fields
 
 
 ## Planned Features
-- [ ] Complete recipe-to-ingredient relationships, including quantities and units
-- [ ] Add `PUT` endpoints to fully update recipes and ingredients
-- [ ] Add `PATCH` endpoints to partially update recipes and ingredients
-- [ ] Add `DELETE` endpoints for recipes and ingredients
-- [ ] Add recipe and ingredient search and filtering
-- [ ] Add server-side input validation and consistent API error responses
+- [x] Link ingredient entries to an existing recipe
+- [x] Return a complete recipe overview with its ingredient entries
+- [ ] Submit recipe details and ingredients together from one form
+- [ ] Add `PUT` and `PATCH` endpoints so owners can edit their own recipes
+- [ ] Add `DELETE` endpoints with ownership checks
+- [ ] Add recipe search and filtering
+- [ ] Add consistent API error responses
 - [ ] Add user accounts and authentication
-- [ ] Enforce user-specific ownership for recipes and ingredients
-- [ ] Implement role-based access control for sensitive operations
+- [ ] Let users share recipes without giving recipients permission to edit the original
+- [ ] Let recipients create their own editable copy of a shared recipe
 - [ ] Add unit and integration tests
-- [ ] Build an Angular frontend for creating, viewing, and managing recipes and ingredients
-- [ ] Connect Angular frontend to Spring Boot REST API
+- [ ] Build and connect the Angular frontend
 - [ ] Deploy the application
 
 ## Tech Stack

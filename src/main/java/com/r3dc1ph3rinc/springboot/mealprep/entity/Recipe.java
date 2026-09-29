@@ -54,8 +54,8 @@ public class Recipe {
     @Column(name = "instructions", nullable = false)
     private String instructions;
 
-//    @OneToMany(mappedBy = "recipe")
-//    private Set<RecipeIngredients> recipeIngredients;
+    @OneToMany(mappedBy = "recipe")
+    private Set<RecipeIngredients> recipeIngredients;
 
     public Recipe() {
 

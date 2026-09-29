@@ -1,6 +1,7 @@
 package com.r3dc1ph3rinc.springboot.mealprep.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -22,6 +23,7 @@ public class RecipeIngredients {
     private Long id;
 
     @ManyToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @JoinColumn(name = "recipe_id")
     private Recipe recipe;
 
